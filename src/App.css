@@ -1,38 +1,198 @@
 .App {
-  text-align: center;
+  width: 100%;
+  background-color: var(--grayish-cyan-background-color);
+  height: 100vh !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  height: 18vh;
+  background-color: var(--dark-cyan);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.listContain {
+  background-color: var(--grayish-cyan-background-color);
+  height: 82vh !important;
+  padding-top: 3em !important;
+  padding-left: 10em !important;
+  padding-right: 10em !important;
+  position: relative;
+
+  @media (max-width: 900px) {
+    padding-top: 2em !important;
+    padding-left: 2em !important;
+    padding-right: 2em !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cardList {
+  height: 100% !important;
+  overflow-y: auto;
+
+}
+
+.input {
+  /* search input */
+  position: absolute;
+  top: -30px;
+  width: 70% !important;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 5px;
+  height: 50px;
+
+  @media (min-width: 1400px) {
+    width: 80% !important;
+  }
+}
+
+.listOptions {
+  /* list options */
+  position: absolute;
+  top: 25px;
+  z-index: 1;
+  height: 200px !important;
+  overflow-y: auto;
+  width: 70% !important;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid gray !important;
+
+  @media (min-width: 1400px) {
+    width: 80% !important;
+  }
+}
+
+.li:hover {
+  background-color: var(--grayish-cyan-background-color) !important;
+  cursor: pointer;
+}
+
+.selectOptions {
+  /* all selected options into input */
+  background-color: var(--grayish-cyan-background-color) !important;
+  color: var(--dark-cyan) !important;
+  border-radius: 0 !important;
+}
+
+
+.optionClose {
+  /* Close icon */
+  background-color: var(--dark-cyan) !important;
+  color: white;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 3px !important;
+  border-bottom-right-radius: 3px !important;
+  cursor: pointer;
+}
+
+.optionClose:hover {
+  background-color: var(--very-dark-grayish-cyan) !important;
+}
+
+.card_content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.company {
+  /* company name css */
+  color: var(--dark-cyan) !important;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.position:hover {
+  /* position css */
+  color: var(--dark-cyan);
+  cursor: pointer;
+}
+
+.badgeNew {
+  /* badge for new */
+  text-transform: uppercase;
+  background-color: var(--dark-cyan) !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+
+}
+
+.badgeFeatured {
+  /* badge for featured */
+  text-transform: uppercase;
+  background-color: var(--very-dark-grayish-cyan) !important;
+}
+
+.time {
+  /* css for time */
+  color: gray;
+  font-size: 14px;
+}
+
+.language {
+  /* language list at right of the card */
+  background-color: var(--grayish-cyan-background-color) !important;
+  color: var(--dark-cyan) !important;
+}
+
+.language:hover {
+  background-color: var(--dark-cyan) !important;
+  color: var(--grayish-cyan-background-color) !important;
+  cursor: pointer;
+}
+
+.cardBorder {
+  /* card with border left */
+  border-left: 5px solid var(--dark-cyan) !important;
+  border-bottom: 0 !important;
+  border-top: 0 !important;
+  border-right: 0 !important;
+}
+
+.cardNoBorder {
+  /* card with without border  */
+  border: 0 !important;
+}
+
+/*================== clear link =================*/
+.link {
+  position: absolute;
+  top: -15px;
+  right: 250px;
+  cursor: pointer;
+  color: gray !important;
+  text-decoration: none;
+
+  @media (max-width: 600px) {
+    right: 60px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.link:hover {
+  color: var(--dark-cyan) !important;
+  text-decoration: underline;
+}
+
+/*================== css mobile =================*/
+.cardMobile {
+  position: relative;
+}
+
+.img {
+  position: absolute;
+  top: -20px;
+  left: 20px
+}
+
+@media screen and (min-width: 1400px) {
+  .link {
+    right: 250px;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .input {
+    width: 85% !important;
   }
 }
